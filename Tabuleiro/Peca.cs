@@ -17,4 +17,9 @@ public class Peca
         qteMovimentos = 0;
         Tabuleiro = tabuleiro;
     }
+
+    public void IncrementarMovimentos()
+    {
+        qteMovimentos++;
+    }
 }
