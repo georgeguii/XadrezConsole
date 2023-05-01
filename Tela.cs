@@ -13,7 +13,19 @@ public class Tela
         ImprimirPecasCapturadas(partida);
         Console.WriteLine();
         Console.WriteLine($"Turno: {partida.Turno}");
-        Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+        if (!partida.Finalizada)
+        {
+            Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+            if (partida.Xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("XEQUEMATE!!!");
+            Console.WriteLine($"Vencedor: {partida.JogadorAtual}");
+        }
     }
 
     public static void ImprimirTabuleiro(TabuleiroC tab)
@@ -83,7 +95,7 @@ public class Tela
             Console.Write(" ");
         }
 
-        
+
     }
 
     public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)

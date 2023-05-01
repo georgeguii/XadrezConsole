@@ -23,6 +23,11 @@ public abstract class Peca
         qteMovimentos++;
     }
 
+    public void DecrementarMovimentos()
+    {
+        qteMovimentos--;
+    }
+
     public bool ExistemMovimentosPossiveis()
     {
         bool[,] mat = MovimentosPossiveis();
